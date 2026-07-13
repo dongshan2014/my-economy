@@ -1,0 +1,248 @@
+/* ============================================================
+   globals.css — all the styling, in one plain CSS file
+   ------------------------------------------------------------
+   No frameworks, on purpose: every rule here is something you
+   can read, change, and see the effect of immediately.
+   The look: a clean paper ledger. Green = income, red = spending
+   (the same convention accountants have used for a century).
+   ============================================================ */
+
+:root {
+  --paper: #fbfaf7;
+  --ink: #1f2a24;
+  --line: #e2e0d8;
+  --ledger-green: #1e6b4f;
+  --ledger-red: #b3372f;
+  --accent: #10513a;
+  --muted: #7d8079;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.5;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+/* ---------- Header ---------- */
+.header h1 {
+  font-size: 2.4rem;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+}
+
+.tagline {
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+.demo-banner {
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: #fdf3d7;
+  border: 1px solid #eadfb2;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* ---------- Summary cards ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin: 1.75rem 0;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.card-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-family: system-ui, sans-serif;
+}
+
+.card-value {
+  font-size: 1.35rem;
+  font-variant-numeric: tabular-nums;
+  font-family: "SFMono-Regular", Consolas, monospace;
+}
+
+.pos { color: var(--ledger-green); }
+.neg { color: var(--ledger-red); }
+
+/* ---------- Panels ---------- */
+.panel {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.panel h2 {
+  font-size: 1.05rem;
+  margin-bottom: 0.9rem;
+  color: var(--accent);
+}
+
+/* ---------- Form ---------- */
+.form-row {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 0.7rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+input, select, button {
+  font: inherit;
+  font-family: system-ui, sans-serif;
+  font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="number"],
+input:not([type]),
+select {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+input:not([type="checkbox"]):first-child {
+  flex: 2;
+  min-width: 200px;
+}
+
+input[type="number"] {
+  flex: 1;
+  min-width: 110px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: system-ui, sans-serif;
+  font-size: 0.9rem;
+}
+
+button {
+  padding: 0.55rem 1.3rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover { background: #0b3d2b; }
+
+/* ---------- Ledger list ---------- */
+.ledger {
+  list-style: none;
+  padding: 0;
+}
+
+.ledger-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 0.2rem;
+  border-bottom: 1px dashed var(--line);
+}
+
+.ledger-row:last-child { border-bottom: none; }
+
+.ledger-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ledger-title { font-size: 0.98rem; }
+
+.ledger-meta {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-family: system-ui, sans-serif;
+}
+
+.ledger-amount {
+  font-variant-numeric: tabular-nums;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.95rem;
+}
+
+.delete-btn {
+  background: transparent;
+  color: var(--muted);
+  padding: 0 0.4rem;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.delete-btn:hover {
+  background: transparent;
+  color: var(--ledger-red);
+}
+
+.muted { color: var(--muted); }
+
+/* ---------- Footer ---------- */
+.footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-family: system-ui, sans-serif;
+  margin-top: 2rem;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 560px) {
+  .cards { grid-template-columns: 1fr; }
+}
+
+/* ---------- Navigation bar (added with the classes/activities pages) ---------- */
+.nav {
+  display: flex;
+  gap: 1.4rem;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 0;
+  font-family: system-ui, sans-serif;
+  font-size: 0.9rem;
+}
+
+.nav a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+.nav a:hover {
+  border-bottom-color: var(--accent);
+}
