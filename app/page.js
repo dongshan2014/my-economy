@@ -131,7 +131,7 @@ export default function HomePage() {
   return (
     <main className="wrap">
       <header className="header">
-        <h1>My Economy</h1>
+        <h1>Ledger</h1>
         <p className="tagline">A personal ledger — where economics meets real life</p>
         {demoMode && (
           <p className="demo-banner">

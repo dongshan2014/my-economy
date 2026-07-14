@@ -1,0 +1,160 @@
+project visit: https://my-economy-sigma.vercel.app/
+
+---------------------------------------------------------------------------------------------------------
+
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\z004mpcc> git config --global user.name  "dongshan2014"
+PS C:\Users\z004mpcc> git config --global user.email "7766315+dongshan2014@users.noreply.github.com"
+PS C:\Users\z004mpcc> cd c:\projects
+PS C:\projects> cd testing
+PS C:\projects\testing> ls
+
+
+    Directory: C:\projects\testing
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/18/2025  11:35 AM                AI
+d-----         6/28/2023   1:36 PM                c
+d-----          3/6/2024   9:38 AM                c++
+d-----         7/13/2026  11:40 AM                go
+d-----          4/2/2026  11:42 AM                java
+d-----        12/15/2023  10:50 AM                kafka
+d-----          5/7/2024   5:27 PM                microservice
+d-----        10/21/2025   7:32 PM                minikube
+d-----         7/13/2026   4:28 PM                my-economy
+d-----          6/5/2026   5:34 PM                My-SCADA
+d-----         1/27/2026   9:41 AM                nodejs
+d-----          5/8/2026   6:32 PM                patroni-test
+d-----          5/7/2025  12:07 PM                python
+d-----         11/7/2025   6:54 PM                TT240
+d-----         1/25/2026   9:55 AM                WHT
+d-----         1/25/2026   9:56 AM                zookeeper
+-a----         7/13/2026   3:31 PM            198 nextjs-dashboard.code-workspace
+
+
+PS C:\projects\testing> cd my-ec*
+PS C:\projects\testing\my-economy> dir
+
+
+    Directory: C:\projects\testing\my-economy
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         7/13/2026   4:31 PM                .next
+d-----         7/13/2026   4:44 PM                app
+d-----         7/13/2026   4:47 PM                lib
+d-----         7/13/2026   3:37 PM                node_modules
+d-----         7/13/2026   4:49 PM                supabase
+-a----         7/13/2026   4:31 PM            612 .env.local
+------         7/13/2026   7:24 AM            419 .env.local.example
+------         7/13/2026   7:24 AM             54 .gitignore
+-a----         7/13/2026   3:37 PM          33023 package-lock.json
+-a----         7/13/2026   7:23 AM            303 package.json
+-a----         7/13/2026   4:30 PM           5385 README.md
+
+
+PS C:\projects\testing\my-economy> git init
+Initialized empty Git repository in C:/Projects/testing/my-economy/.git/
+PS C:\projects\testing\my-economy> dir
+
+
+    Directory: C:\projects\testing\my-economy
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         7/13/2026   4:31 PM                .next
+d-----         7/13/2026   4:44 PM                app
+d-----         7/13/2026   4:47 PM                lib
+d-----         7/13/2026   3:37 PM                node_modules
+d-----         7/13/2026   4:49 PM                supabase
+-a----         7/13/2026   4:31 PM            612 .env.local
+------         7/13/2026   7:24 AM            419 .env.local.example
+------         7/13/2026   7:24 AM             54 .gitignore
+-a----         7/13/2026   3:37 PM          33023 package-lock.json
+-a----         7/13/2026   7:23 AM            303 package.json
+-a----         7/13/2026   4:30 PM           5385 README.md
+
+
+PS C:\projects\testing\my-economy> git add .
+warning: in the working copy of '.env.local.example', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/activities/page.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/classes/page.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/globals.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/layout.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/page.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/supabase.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'supabase/01_transactions.sql', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'supabase/02_school.sql', LF will be replaced by CRLF the next time Git touches it
+PS C:\projects\testing\my-economy> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .env.local.example
+        new file:   .gitignore
+        new file:   README.md
+        new file:   app/activities/page.js
+        new file:   app/classes/page.js
+        new file:   app/globals.css
+        new file:   app/layout.js
+        new file:   app/page.js
+        new file:   lib/supabase.js
+        new file:   package-lock.json
+        new file:   package.json
+        new file:   supabase/01_transactions.sql
+        new file:   supabase/02_school.sql
+
+PS C:\projects\testing\my-economy> git commit -m "Initial commit: My Economy starter"
+[master (root-commit) f384b99] Initial commit: My Economy starter
+ 13 files changed, 2132 insertions(+)
+ create mode 100644 .env.local.example
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+ create mode 100644 app/activities/page.js
+ create mode 100644 app/classes/page.js
+ create mode 100644 app/globals.css
+ create mode 100644 app/layout.js
+ create mode 100644 app/page.js
+ create mode 100644 lib/supabase.js
+ create mode 100644 package-lock.json
+ create mode 100644 package.json
+ create mode 100644 supabase/01_transactions.sql
+ create mode 100644 supabase/02_school.sql
+PS C:\projects\testing\my-economy> git status
+On branch master
+nothing to commit, working tree clean
+PS C:\projects\testing\my-economy> git remote add origin https://github.com/dongshan2014/my-economy.git
+PS C:\projects\testing\my-economy> git branch -M main
+PS C:\projects\testing\my-economy> git push -u origin main
+info: please complete authentication in your browser...
+git: 'credential-manager-core' is not a git command. See 'git --help'.
+Enumerating objects: 20, done.
+Counting objects: 100% (20/20), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (20/20), 20.46 KiB | 2.05 MiB/s, done.
+Total 20 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/dongshan2014/my-economy.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\projects\testing\my-economy> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\projects\testing\my-economy>
